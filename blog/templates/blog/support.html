@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% if user.is_authenticated %}
+<div class="content-section">
+    <h3>About Us</h3>
+</div>
+{% else %}
+<meta http-equiv = "refresh" content = "0; url = {% url 'login' %}" />
+{% endif %}
+{% endblock content %}
+ 
